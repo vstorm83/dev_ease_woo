@@ -1,0 +1,373 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate WooCommerce Brands plugin\n"
+"POT-Creation-Date: 2014-11-06 12:45+0200\n"
+"PO-Revision-Date: 2015-02-11 10:25+0100\n"
+"Last-Translator: dedalx <dedalx.rus@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: mgwoocommercebrands-admin.php:69
+msgid "Brands settings"
+msgstr "Podešavanja brand-ova"
+
+#: mgwoocommercebrands-admin.php:106
+msgid "General Options"
+msgstr "Opšta podešavanja"
+
+#: mgwoocommercebrands-admin.php:111
+msgid "Brand name show on"
+msgstr "Prikaži naziv brand-a na "
+
+#: mgwoocommercebrands-admin.php:115
+msgid "Please select where you want show Brand name."
+msgstr "Odaberite gde želite da prikažete naziv brand-a"
+
+#: mgwoocommercebrands-admin.php:117
+msgid "Both categories and product detail page"
+msgstr "Stranica sa detaljima kategorija i proizvoda"
+
+#: mgwoocommercebrands-admin.php:118
+msgid "Only categories "
+msgstr "Samo kategorije"
+
+#: mgwoocommercebrands-admin.php:119
+msgid "Only product detail"
+msgstr "Samo detalji proizvoda"
+
+#: mgwoocommercebrands-admin.php:123
+msgid "Brand title"
+msgstr "Naziv brand-a"
+
+#: mgwoocommercebrands-admin.php:127
+msgid "Leave empty if you dont want to show brand title before brand name(s)"
+msgstr "Ostavite prazno ako ne želite da prikažete naslov brand-a pre naziva brand-a "
+
+#: mgwoocommercebrands-admin.php:129 mgwoocommercebrands-admin.php:141
+msgid "Show as brand(s) title"
+msgstr "Prikaži kao naslov brand-a"
+
+#: mgwoocommercebrands-admin.php:130 mgwoocommercebrands-admin.php:142
+msgid "Show as brand(s) image"
+msgstr "Prikaži kao sliku brand-a"
+
+#: mgwoocommercebrands-admin.php:135
+msgid "Brand display type on product detail page"
+msgstr "Vrsta prikaza brand-a na stranici za detalje proizvoda"
+
+#: mgwoocommercebrands-admin.php:139
+msgid "Please check if you want to see brand image instead of title"
+msgstr "Proverite želite li da vidite sliku brand-a umesto naziva"
+
+#: mgwoocommercebrands-admin.php:148
+msgid "Product Details Page"
+msgstr "Stranica sa detaljima proizvoda"
+
+#: mgwoocommercebrands-admin.php:153
+msgid "Brand display position"
+msgstr "Položaj prikaza brand-a"
+
+#: mgwoocommercebrands-admin.php:157
+msgid "Please choose postion where brand show on product details page."
+msgstr "Odaberite gde treba prikazati brand na stranici za detalje proizvoda"
+
+#: mgwoocommercebrands-admin.php:159
+msgid "Above tabs area"
+msgstr "Oblast iznad tabulatora"
+
+#: mgwoocommercebrands-admin.php:160
+msgid "Below tabs area"
+msgstr "Oblast ispod tabulatora"
+
+#: mgwoocommercebrands-admin.php:161
+msgid "Above short description"
+msgstr "Iznad kratkog opisa"
+
+#: mgwoocommercebrands-admin.php:162
+msgid "Below short description"
+msgstr "Ispod kratkog opisa"
+
+#: mgwoocommercebrands-admin.php:163
+msgid "Above Add to cart"
+msgstr "Iznad ‘Ubaci u korpu’"
+
+#: mgwoocommercebrands-admin.php:164
+msgid "Below Add to cart"
+msgstr "Ispod ‘Ubaci u korpu’"
+
+#: mgwoocommercebrands-admin.php:165
+msgid "Above Categories list"
+msgstr "Iznad liste ‘Kategorije’"
+
+#: mgwoocommercebrands-admin.php:166
+msgid "Below Categories list"
+msgstr "Ispod liste ‘Kategorije’"
+
+#: mgwoocommercebrands-admin.php:172
+msgid "Product Category"
+msgstr "Kategorija proizvoda"
+
+#: mgwoocommercebrands-admin.php:177
+msgid "Brand display position on category"
+msgstr "Položaj brand-a u kategoriji"
+
+#: mgwoocommercebrands-admin.php:181
+msgid "Please choose postion where brand show on category products."
+msgstr "Odaberite gde treba prikazati brand u kategoriji proizvoda"
+
+#: mgwoocommercebrands-admin.php:183
+msgid "Above price"
+msgstr "Iznad cene"
+
+#: mgwoocommercebrands-admin.php:184
+msgid "Above title"
+msgstr "Iznad naziva"
+
+#: mgwoocommercebrands-admin.php:185
+msgid "Below title"
+msgstr "Ispod naziva"
+
+#: mgwoocommercebrands-admin.php:186
+msgid "Above Add to Cart"
+msgstr "Iznad ‘Ubaci u korpu’"
+
+#: mgwoocommercebrands-admin.php:187
+msgid "Below Add to Cart"
+msgstr "Ispod ‘Ubaci u korpu’"
+
+#: mgwoocommercebrands-widget-brands-list.php:44
+msgid "Title:"
+msgstr "Naslov"
+
+#: mgwoocommercebrands-widget-brands-list.php:47
+msgid "Display type:"
+msgstr "Vrsta prikaza"
+
+#: mgwoocommercebrands-widget-brands-list.php:49
+msgid "Text"
+msgstr "Tekst"
+
+#: mgwoocommercebrands-widget-brands-list.php:50
+msgid "Image"
+msgstr "Slika"
+
+#: mgwoocommercebrands-widget-brands-list.php:53
+msgid "Hide empty brands:"
+msgstr "Sakrij prazne brand-ove"
+
+#: mgwoocommercebrands-widget-brands-list.php:55
+#: mgwoocommercebrands-widget-brands-list.php:61
+msgid "No"
+msgstr "Ne"
+
+#: mgwoocommercebrands-widget-brands-list.php:56
+#: mgwoocommercebrands-widget-brands-list.php:62
+msgid "Yes"
+msgstr "Da"
+
+#: mgwoocommercebrands-widget-brands-list.php:59
+msgid "Show product count (for Text brands display):"
+msgstr "Prikaži broj proizvoda (za prikaz teksta brand-ova)"
+
+#: mgwoocommercebrands.php:101
+msgid "Search Brands"
+msgstr "Pretraži brand-ove"
+
+#: mgwoocommercebrands.php:102
+msgid "All Brands"
+msgstr "Svi brand-ovi"
+
+#: mgwoocommercebrands.php:103
+msgid "Parent Brand"
+msgstr "Nadređeni brand"
+
+#: mgwoocommercebrands.php:104
+msgid "Parent Brands:"
+msgstr "Nadređeni brand-ovi"
+
+#: mgwoocommercebrands.php:105
+msgid "Edit Brands"
+msgstr "Uredi brand-ove"
+
+#: mgwoocommercebrands.php:106
+msgid "Update Brands"
+msgstr "Ažuriraj brand-ove"
+
+#: mgwoocommercebrands.php:107
+msgid "Add New Brand"
+msgstr "Dodaj novi brand"
+
+#: mgwoocommercebrands.php:108
+msgid "New Brand Name"
+msgstr "Novi naziv brand-a"
+
+#: mgwoocommercebrands.php:109
+msgid "Brands"
+msgstr "Brand-ovi"
+
+#: mgwoocommercebrands.php:144
+msgid "Brand Logo image "
+msgstr "Slika za logo brand-a"
+
+#: mgwoocommercebrands.php:334
+msgid "Brand:"
+msgstr "Brand:"
+
+#: mgwoocommercebrands.php:450
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: mgwoocommercebrands.php:459
+msgid "Visit Premium Customer Support Ticket System"
+msgstr "Posetite Premium Customer Support Ticket System"
+
+#: mgwoocommercebrands.php:459
+msgid "Premium Support"
+msgstr "Premium podrška"
+
+#: mgwoocommercebrands.php:460
+msgid "Premium WordPress themes"
+msgstr "Premium WordPress teme"
+
+#: mgwoocommercebrands.php:817
+msgid "Products by Brand"
+msgstr "Proizvodi po brand-ovima"
+
+#: mgwoocommercebrands.php:818 mgwoocommercebrands.php:891
+#: mgwoocommercebrands.php:982
+msgid "Products"
+msgstr "Proizvodi "
+
+#: mgwoocommercebrands.php:819
+msgid "Display WooCommerce products"
+msgstr "Prikaži WooCommerce proizvode"
+
+#: mgwoocommercebrands.php:830 mgwoocommercebrands.php:994
+msgid "Title"
+msgstr "Naslov"
+
+#: mgwoocommercebrands.php:840
+msgid "Brand"
+msgstr "Brand"
+
+#: mgwoocommercebrands.php:849
+msgid "Number of Products"
+msgstr "Broj proizvoda"
+
+#: mgwoocommercebrands.php:859
+msgid "Order By"
+msgstr "Rasporedi po"
+
+#: mgwoocommercebrands.php:860
+msgid "Description for Order By."
+msgstr "Opsi za ‘Rasporedi po’"
+
+#: mgwoocommercebrands.php:877
+msgid "Order"
+msgstr "Redosled"
+
+#: mgwoocommercebrands.php:878
+msgid "Description for Order."
+msgstr "Opsi za redosled"
+
+#: mgwoocommercebrands.php:890
+msgid "Brands List"
+msgstr "Lista brand-ova"
+
+#: mgwoocommercebrands.php:892
+msgid "Display Brands list"
+msgstr "Prikaži listu brand-ova"
+
+#: mgwoocommercebrands.php:903
+msgid "Display ABC filter (Work with 'Display brands later = Yes')"
+msgstr "Prikaži ABC filter (radi sa ‘Prikaži brand-ove "
+
+#: mgwoocommercebrands.php:916
+msgid "Display brands laters"
+msgstr "Prikaži brand-ove kasnije"
+
+#: mgwoocommercebrands.php:929 mgwoocommercebrands.php:1038
+msgid "Display type"
+msgstr "Vrsta prikaza"
+
+#: mgwoocommercebrands.php:943
+msgid "Show brand description"
+msgstr "Prikaži opis brand-a"
+
+#: mgwoocommercebrands.php:956 mgwoocommercebrands.php:1051
+msgid "Hide empty brands"
+msgstr "Sakrij prazne brand-ove"
+
+#: mgwoocommercebrands.php:969
+msgid "Show items count in brand"
+msgstr "Prikaži stavke po brand-u"
+
+#: mgwoocommercebrands.php:981
+msgid "Brands Slider"
+msgstr "Slider brand-ova"
+
+#: mgwoocommercebrands.php:983
+msgid "Display Brands Slider"
+msgstr "Prikaži slider brand-ova"
+
+#: mgwoocommercebrands.php:1003
+msgid "Slider auto play"
+msgstr "Automatsko pokretanje slider-a"
+
+#: mgwoocommercebrands.php:1016
+msgid "Items in slider"
+msgstr "Stavke u slider-u"
+
+#: mgwoocommercebrands.php:1025
+msgid "Show navigation arrows"
+msgstr "Prikaži navigacione strelice"
+
+#: mgwoocommercebrands.php:1064
+msgid "Show items count in brand title"
+msgstr "Prikaži stavke po naslovu brand-a"
+
+#: include/Tax-meta-class/Tax-meta-class.php:250
+msgid "Delete this image"
+msgstr "Obriši ovu sliku"
+
+#: include/Tax-meta-class/Tax-meta-class.php:250
+#: include/Tax-meta-class/Tax-meta-class.php:882
+msgid "Delete"
+msgstr "Obriši"
+
+#: include/Tax-meta-class/Tax-meta-class.php:357
+msgid "Cannot delete file. Something's wrong."
+msgstr "Datoteka ne može biti obrisana. Nešto nije u redu. "
+
+#: include/Tax-meta-class/Tax-meta-class.php:582
+#: include/Tax-meta-class/Tax-meta-class.php:629
+msgid "Remove"
+msgstr "Ukloni"
+
+#: include/Tax-meta-class/Tax-meta-class.php:595
+msgid "Add"
+msgstr "Dodaj"
+
+#: include/Tax-meta-class/Tax-meta-class.php:878
+msgid "Uploaded files"
+msgstr "Otpremljene datoteke"
+
+#: include/Tax-meta-class/Tax-meta-class.php:889
+msgid "Upload new files"
+msgstr "Otpremi nove datoteke"
+
+#: include/Tax-meta-class/Tax-meta-class.php:895
+msgid "Add more files"
+msgstr "Dodajte još datoteka"
+
+#: include/Tax-meta-class/Tax-meta-class.php:947
+msgid "Select a color"
+msgstr "Odaberite boju"
