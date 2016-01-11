@@ -1,0 +1,40 @@
+#back-to-top {
+
+    position: absolute;
+
+    top: -55px;
+
+    right: 40px;
+
+    z-index: 9999;
+
+    text-align: center;
+
+    line-height: 30px;
+
+    color: #dd9a3d;
+
+    cursor: pointer;
+
+    border: 0;
+
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease-out;
+
+    opacity: 0;
+
+	font-weight: bold;
+
+}
+
+#back-to-top.show{
+	opacity: 1;
+}
+#content {
+
+    height: 2000px;
+
+}

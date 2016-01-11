@@ -1,0 +1,165 @@
+<?php
+/**
+ * The Template for displaying all products.
+ *
+ * Override this template by copying it to yourtheme/woocommerce/shop.php
+ *
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
+ * @version     1.6.4
+ */
+
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+?>
+
+
+<div class="motopress-wrapper content-holder clearfix woocommerce">
+<div class="container">
+<div class="row">
+<div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-title.php"><section class="title-section">
+<h1 class="title-header">
+Store 
+</h1>
+ 
+<ul class="breadcrumb breadcrumb__t"><li><a href="<?php echo site_url();?>">Home</a></li><li class="divider"></li><li class="active">Store</li></ul>  
+</section> </div>
+</div>
+<div class="row">
+<div class="span9 right" id="content">
+<h1 class="page-title">Store</h1>
+
+<form class="woocommerce-ordering" method="get">
+<select name="orderby" class="orderby">
+<option value="menu_order" selected='selected'>Default sorting</option>
+<option value="popularity">Sort by popularity</option>
+<option value="rating">Sort by average rating</option>
+<option value="date">Sort by newness</option>
+<option value="price">Sort by price: low to high</option>
+<option value="price-desc">Sort by price: high to low</option>
+</select>
+</form>
+
+
+
+
+<ul class="products">
+
+<?php 										
+						$productlist = Ahlu::getObject("Ecommercial_model");
+						
+											
+						$product=$productlist->hasPostchildren(6,URI::getInstance()->page);					
+						
+						if($product)
+						{
+							
+							foreach($product->data as $k=>$itemk)
+								
+							{
+								$pos = ($k%3==0 ? "first" :(($k+1)%3==0 ? "last":""));
+								$url= site_url($itemk->post_name);
+								$title=substr($itemk->post_title,0,25).'...';
+								$content=substr($itemk->post_excerpt,0,100);
+								$cart=site_url("/store/?add-to-cart=".$itemk->ID);
+								
+								if($itemk->sale_price==null)
+								{
+									$rating='<div class="star-rating" title="Rated 4.00 out of 5"><span style="width:80%"><strong class="rating">4.00</strong> out of 5</span></div>';
+									$sale='';
+									$price='<span class="price"><span class="amount">&#36;'.$itemk->regular_price.'</span></span>';
+								}
+								else
+								{
+									$rating='';
+									$sale='<span class="onsale">Sale!</span>';
+									$price='<span class="price"><del><span class="amount">&#36;'.$itemk->regular_price.'</span></del> <ins><span class="amount">&#36;'.$itemk->sale_price.'</span></ins></span>';
+								}
+								
+echo <<<MINH
+
+<li class="post-{$itemk->ID} product type-product status-publish has-post-thumbnail {$pos} shipping-taxable purchasable product-type-simple product-cat-product-category-1 product-cat-product-category-5 product-tag-lorem-ipsum product-tag-sed-blandit-massa product-tag-vel-mauris instock">
+<a href="{$url}">
+{$sale}
+<img width="300" height="300" src="{$itemk->thumbnail}" class="attachment-shop_catalog wp-post-image" alt="{$itemk->post_name}"/>
+<h3>{$title}</h3>
+{$rating}
+</a>
+<div class="short_desc">{$content} </div>
+<a href="{$cart}" rel="nofollow" data-product_id="{$itemk->ID}" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Add to cart</a>
+{$price}
+<div class="product-list-buttons"><a href="/woocommerce_53023/shop/?action=yith-woocompare-add-product&amp;id={$itemk->ID}&amp;_wpnonce=ff417ba1b5" class="compare" data-product_id="{$itemk->ID}">Compare</a><div class="yith-wcwl-add-to-wishlist"><div class="yith-wcwl-add-button show"><a href="http://livedemo00.template-help.com/woocommerce_53023/wp-content/plugins/yith-woocommerce-wishlist/yith-wcwl-ajax.php?action=add_to_wishlist&#038;add_to_wishlist={$itemk->ID}" data-product-id="{$itemk->ID}" data-product-type="simple" class="add_to_wishlist">Add to Wishlist</a><img src="http://livedemo00.template-help.com/woocommerce_53023/wp-admin/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden"/></div><div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"><span class="feedback">Product added!</span> <a href="http://livedemo00.template-help.com/woocommerce_53023/wishlist/">Browse Wishlist</a></div><div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"><span class="feedback">The product is already in the wishlist!</span> <a href="http://livedemo00.template-help.com/woocommerce_53023/wishlist/">Browse Wishlist</a></div><div style="clear:both"></div><div class="yith-wcwl-wishlistaddresponse"></div></div><div class="clear"></div> 
+	<script type="text/javascript">
+        if( !jQuery( '#yith-wcwl-popup-message' ).length ) {
+            jQuery( 'body' ).prepend(
+                '<div id="yith-wcwl-popup-message" style="display:none;">' +
+                    '<div id="yith-wcwl-message"></div>' +
+                    '</div>'
+            );
+        }
+    </script>
+</div>
+</li>	
+
+MINH;
+								
+ }
+ ?>
+
+</ul>
+<?php if(!empty ($product->link)){
+						echo $product->link;
+				}
+ } ?>
+
+
+</div>
+
+<div class="sidebar span3" id="sidebar" data-motopress-type="static-sidebar" data-motopress-sidebar-file="sidebar.php">
+<div id="woocommerce_price_filter-2" class="widget"><h3>Filter by price</h3><form method="get" action="<?php site_url("store"); ?>">
+<div class="price_slider_wrapper">
+<div class="price_slider" style="display:none;"></div>
+<div class="price_slider_amount">
+<input type="text" id="min_price" name="min_price" value="" data-min="50" placeholder="Min price"/>
+<input type="text" id="max_price" name="max_price" value="" data-max="120" placeholder="Max price"/>
+<button type="submit" class="button">Filter</button>
+<div class="price_label" style="display:none;">
+Price: <span class="from"></span> &mdash; <span class="to"></span>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</form></div><div id="categories-4" class="widget"><h3>Categories</h3> <ul>
+<li class="cat-item cat-item-6"><a href="http://livedemo00.template-help.com/woocommerce_53023/category/fusce-feugiat/">Fusce feugiat</a>
+</li>
+<li class="cat-item cat-item-8"><a href="http://livedemo00.template-help.com/woocommerce_53023/category/phasellus-porta/">Phasellus porta</a>
+</li>
+<li class="cat-item cat-item-9"><a href="http://livedemo00.template-help.com/woocommerce_53023/category/sit-amet-2/">Sit amet</a>
+</li>
+<li class="cat-item cat-item-1"><a href="http://livedemo00.template-help.com/woocommerce_53023/category/uncategorized/">Uncategorized</a>
+</li>
+</ul>
+</div><div id="woocommerce_product_categories-2" class="widget"><h3>Product Categories</h3><ul class="product-categories"><li class="cat-item cat-item-32"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/product-category-2/">Bridesmaid Dresses</a> <span class="count">(5)</span></li>
+<li class="cat-item cat-item-33"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/product-category-3/">Mother Dresses</a> <span class="count">(1)</span></li>
+<li class="cat-item cat-item-34"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/product-category-4/">Pregnant Dresses</a> <span class="count">(4)</span></li>
+<li class="cat-item cat-item-35"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/sale/">Sale</a> <span class="count">(0)</span></li>
+<li class="cat-item cat-item-36"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/product-category-1/">Wedding Dresses</a> <span class="count">(2)</span></li>
+<li class="cat-item cat-item-37"><a href="http://livedemo00.template-help.com/woocommerce_53023/product-category/product-category-5/">Wedding Jewelry</a> <span class="count">(3)</span></li>
+</ul></div><div id="woocommerce_top_rated_products-2" class="widget"><h3>Top Rated Products</h3><ul class="product_list_widget"><li>
+<a href="http://livedemo00.template-help.com/woocommerce_53023/product/product-15/" title="Window slive writer diamond wedding ring">
+<img width="90" height="90" src="http://livedemo00.template-help.com/woocommerce_53023/wp-content/uploads/2015/02/window_slive_writer_diamond_wedding_ring_set_1-90x90.jpg" class="attachment-shop_thumbnail wp-post-image" alt="window_slive_writer_diamond_wedding_ring_set_1"/> <span class="product-title">Window slive writer diamond wedding ring</span>
+</a>
+<div class="star-rating" title="Rated 5.00 out of 5"><span style="width:100%"><strong class="rating">5.00</strong> out of 5</span></div> <span class="amount">&#36;95.00</span></li><li>
+<a href="http://livedemo00.template-help.com/woocommerce_53023/product/product-13/" title="For the love birds">
+<img width="90" height="90" src="http://livedemo00.template-help.com/woocommerce_53023/wp-content/uploads/2015/02/for_the_love_birds_-_elegant_icon_favor_box_1-90x90.jpg" class="attachment-shop_thumbnail wp-post-image" alt="for_the_love_birds_-_elegant_icon_favor_box_1"/> <span class="product-title">For the love birds</span>
+</a>
+<div class="star-rating" title="Rated 5.00 out of 5"><span style="width:100%"><strong class="rating">5.00</strong> out of 5</span></div> <span class="amount">&#36;100.00</span></li><li>
+<a href="http://livedemo00.template-help.com/woocommerce_53023/product/product-8/" title="Elegant chiffon collection">
+<img width="90" height="90" src="http://livedemo00.template-help.com/woocommerce_53023/wp-content/uploads/2015/02/elegant_chiffon_collection_3-90x90.jpg" class="attachment-shop_thumbnail wp-post-image" alt="elegant_chiffon_collection_3"/> <span class="product-title">Elegant chiffon collection</span>
+</a>
+<div class="star-rating" title="Rated 5.00 out of 5"><span style="width:100%"><strong class="rating">5.00</strong> out of 5</span></div> <span class="amount">&#36;99.50</span></li></ul></div></div>
+</div>
+</div>
+</div>

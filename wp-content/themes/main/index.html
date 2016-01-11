@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>EASE</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+	 <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+	 <script src="js/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script src="js/jquery.metadata.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-table.min.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+
+	
+	<link rel="stylesheet" href="ahlu.css">
+	
+    <script>
+		function line(who){
+			//http://stackoverflow.com/questions/20969434/drawing-line-in-a-div-with-javascript
+			function drawnode(obj,x, y) {
+
+			 var ele = ""
+			 var style = "";
+			 style += "position:absolute;";
+			 style += "z-index:100;"
+			 ele += "<div class='relNode' style=" + style + ">";
+			 ele += "<span>&nbsp;</span>"
+			 ele += "<div>"
+
+			 $(obj).show();
+			 var node = $(ele).appendTo(obj);
+			 var width = node.width();
+			 var height = node.height();
+
+			 var centerX = width / 2;
+			 var centerY = height / 2;
+
+			 var startX = x - centerX;
+			 var startY = y - centerY;
+
+			 node.css("left", startX).css("top", startY);
+
+		 }
+
+		 function drawline(obj,ax, ay, bx, by) {
+			 console.log('ax: ' + ax);
+			 console.log('ay: ' + ay);
+			 console.log('bx: ' + bx);
+			 console.log('by: ' + by);
+
+
+			 if (ax > bx) {
+				 bx = ax + bx;
+				 ax = bx - ax;
+				 bx = bx - ax;
+				 by = ay + by;
+				 ay = by - ay;
+				 by = by - ay;
+			 }
+
+
+			 console.log('ax: ' + ax);
+			 console.log('ay: ' + ay);
+			 console.log('bx: ' + bx);
+			 console.log('by: ' + by);
+
+			 var angle = Math.atan((ay - by) / (bx - ax));
+			 console.log('angle: ' + angle);
+
+			 angle = (angle * 180 / Math.PI);
+			 console.log('angle: ' + angle);
+			 angle = -angle;
+			 console.log('angle: ' + angle);
+
+			 var length = Math.sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
+			 console.log('length: ' + length);
+
+			 var style = ""
+			 style += "left:" + (ax) + "px;"
+			 style += "top:" + (ay) + "px;"
+			 style += "width:" + length + "px;"
+			 style += "height:1px;"
+			 style += "background-color:#ccc;"
+			 style += "position:absolute;"
+			 style += "transform:rotate(" + angle + "deg);"
+			 style += "-ms-transform:rotate(" + angle + "deg);"
+			 style += "transform-origin:0% 0%;"
+			 style += "-moz-transform:rotate(" + angle + "deg);"
+			 style += "-moz-transform-origin:0% 0%;"
+			 style += "-webkit-transform:rotate(" + angle + "deg);"
+			 style += "-webkit-transform-origin:0% 0%;"
+			 style += "-o-transform:rotate(" + angle + "deg);"
+			 style += "-o-transform-origin:0% 0%;"
+			 style += "z-index:1;"
+			 $("<div style='" + style + "'></div>").appendTo(obj);
+		 }
+		   //here we go
+		   var line = (new Date()).getTime();
+		   var line_1 = (new Date()).getTime()+1;
+		   who.append("<div id='line-"+line+"'></div><div id='line-"+line_1+"'></div>");
+		   //update line
+		  // line = who.find("#line-"+line);
+		  // line_1 = who.find("#line-"+line_1);
+		   
+		   var w = who.outerWidth(true)-4;
+		   var h = who.outerHeight(true);
+		   // right top -> left bottom
+			    x1 = 0, y1 = 0,
+				x2 = w, y2 = h;
+			
+			drawnode("#line-"+line,x1, y1);
+			drawnode("#line-"+line,x2, y2);
+			drawline("#line-"+line,x1, y1, x2, y2);
+
+			drawnode("#line-"+line_1,x2, y1);
+			drawnode("#line-"+line_1,x1, y2);
+			drawline("#line-"+line_1,x2, y1, x1, y2);
+		}
+    </script>
+<body>
+	<div class="wrapper">
+		<div class="wrapper main_header">
+			<div class="container-inner min-height">
+				<div class="wrapper navigation">
+					<div class="left no-space col-md-4">
+						<img src="images/logo.png" class="logo left" />
+						<div class="slogan left">Emerald Air Starters & Equipment</div>
+					</div>
+					<div class="menu-container right">
+						<div class="menu-vertical left">
+							<ul>
+								<li><a href="" target="_self">about us</a></li>
+								<li><a href="" target="_self">contact us</a></li>
+							</ul>
+						</div>
+						<div class="menu-horizontal right">
+							<a href="#" class="open-menu"><img src="images/3_rows.png" /></a>
+							<div class="group">
+								<input type="text" class="search" />
+								<div class="menu"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper main_content">
+			<div class="container-inner min-height">
+				<div class="wrapper slideshow-container">
+					<div class="ahlu-box-img ahlu-box-img-350">
+						<div class="background">
+							<script>
+								$(document).ready(function(){
+									line($(".ahlu-box-img-350"));
+								});
+							</script>
+						</div>
+						<div class="text">Slideshow here</div>
+					</div>
+				</div>
+				<div class="wrapper slider-container">
+					<div class="ahlu-box-img ahlu-box-img-150">
+						<div class="background">
+							<script>
+								$(document).ready(function(){
+									line($(".ahlu-box-img-150"));
+								});
+							</script>
+						</div>
+						<div class="text">Slider here</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper main_footer">
+			<div class="container-inner min-height">
+				footer
+			</div>
+		</div>
+	</div>
+</body>
+</html>

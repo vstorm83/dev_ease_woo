@@ -1,0 +1,1 @@
+[22-Dec-2015 07:39:42 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/dev/public_html/dev_ease_woo/wp-content/themes/main/hack.php on line 196
