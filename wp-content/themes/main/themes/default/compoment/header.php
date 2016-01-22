@@ -64,7 +64,7 @@
 
 								<div class="group">
 
-									<input type="text" onkeypress="if((event.charCode || event.keyCode)==13){location.href='<?php echo site_url(); ?>/shop?s='+event.target.value;}" class="search" name="q" placeholder="Search here" />
+									<input type="text" onkeypress="if((event.charCode || event.keyCode)==13){location.href='<?php echo site_url(); ?>/shop?woof_title='+event.target.value;}" class="search" name="q" placeholder="Search here" />
 
 									<div class="menu">
 
