@@ -1,7 +1,7 @@
-<?php
-header("Location:".site_url()."");die(); 
-?> 
-
-
-
-
+<?php
+header("Location:".site_url()."");die(); 
+?> 
+
+
+
+

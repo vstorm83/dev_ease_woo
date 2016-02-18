@@ -53,7 +53,7 @@ get_header( 'shop' ); ?>
      <a href="mailto:info@airstart.com.au?subject=EASE – Web Product Order Enquiry"> <img src="<?php bloginfo('template_directory');?>/images/contact.png" /></a>
    
      <h2>
-         Can’t find what you’re looking for?  We can order it in for you with <a href="mailto:info@airstart.com.au?subject=EASE – Web Product Order Enquiry">EASE</a>!  Send us your enquiry now
+         Can't find what you're looking for?  We can order it in for you with <a href="mailto:info@airstart.com.au?subject=EASE – Web Product Order Enquiry">EASE</a>!  Send us your enquiry now
      </h2>
  </div>
  </div>

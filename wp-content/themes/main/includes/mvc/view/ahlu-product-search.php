@@ -10,18 +10,13 @@
 				<div class="search-title"><span class="head-title"><?php echo $search->name; ?></span></div>
 			</div>
 			<script>
-				$(document).ready(function(){
-					$(".product-items .item .title").on({
-						mouseenter: function(e) { 
-							$(this).closest(".wrapper").addClass("wrapper-hover"); 
-						}
+				$(document).ready(function() {
+					$(document).on('mouseenter', '.products  li .wrapper .a-title h3', function(e) {
+						$(e.target).closest(".wrapper").addClass("wrapper-hover"); 
 					});
-					$(".product-items .item").on({
-						mouseleave: function(e) { 
-							$(this).find(".wrapper").removeClass("wrapper-hover"); 
-						}
-					});
-					
+					$(document).on('mouseleave', '.products  li', function(e) {
+						$(e.target).closest(".wrapper").removeClass("wrapper-hover"); 
+					});			
 				});
 				function showMsg(msg){
 					$(".well").html("Add "+msg+" To Cart successfully").show("slow",function(){setTimeout(function(){$(".well").hide("slow");},3000)});

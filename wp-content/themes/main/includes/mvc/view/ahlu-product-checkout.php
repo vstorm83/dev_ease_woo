@@ -52,6 +52,7 @@ $cart_url = site_url("cart");
 							$icon = strtolower($cart_fake[$item->product_id]);
 	
 							$thumbnail = wp_get_attachment_url( get_post_thumbnail_id($item->product_id) );
+							$icon = $icon == '' ? 'product' : $icon;
 							$icon  = get_template_directory_uri()."/images/{$icon}-enquiry.png";
 							$display = get_post_meta($item->product_id, 'display', true );
 						

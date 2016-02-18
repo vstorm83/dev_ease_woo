@@ -27,18 +27,13 @@ get_header( 'shop' ); ?>
 		
 	?>
 	<script>
-		$(document).ready(function(){
-			$(".products  li .wrapper .a-title h3").on({
-				mouseenter: function(e) { 
-					$(this).closest(".wrapper").addClass("wrapper-hover"); 
-				}
+		$(document).ready(function() {
+			$(document).on('mouseenter', '.products  li .wrapper .a-title h3', function(e) {
+				$(e.target).closest(".wrapper").addClass("wrapper-hover"); 
 			});
-			$(".products  li").on({
-				mouseleave: function(e) { 
-					$(this).find(".wrapper").removeClass("wrapper-hover"); 
-				}
-			});
-			
+			$(document).on('mouseleave', '.products  li', function(e) {
+				$(e.target).closest(".wrapper").removeClass("wrapper-hover"); 
+			});			
 		});
 		function showMsg(msg){
 			$(".well").html("Add "+msg+" To Cart successfully").show("slow",function(){setTimeout(function(){$(".well").hide("slow");},3000)});

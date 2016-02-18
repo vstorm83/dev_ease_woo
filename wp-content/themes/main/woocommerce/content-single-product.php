@@ -144,7 +144,7 @@ global $post, $product, $woocommerce;
 							.bx-wrapper  .bx-controls-direction{display:none;}
 						  </style>
 						<div class="slider-container">
-							<ul class="bxslider" style=" height: 212px;   overflow: hidden;">
+							<ul class="bxslider">
 						
 						<?php
 							$data = array();
@@ -170,9 +170,16 @@ global $post, $product, $woocommerce;
 						</div>
 						</div>
 						
-					<div  class="read-brochure right ">
-						<a href="<?php echo get_post_meta( get_the_ID(), 'link_pdf', true ); ?>" target="_blank"><img src="<?php bloginfo('template_directory');?>/images/read-brochure_1.png"  /></a>
-					</div>
+				    <?php 
+				    $link_pdf = get_post_meta( get_the_ID(), 'link_pdf', true );
+				    if (!empty($link_pdf)) {
+				    ?>
+						<div  class="read-brochure right">
+							<a href="<?php echo get_post_meta( get_the_ID(), 'link_pdf', true ); ?>" target="_blank"><img src="<?php bloginfo('template_directory');?>/images/read-brochure_1.png"  /></a>
+						</div>
+				    <?php 	
+				    }
+				    ?>
 				</div><!-- .summary -->
 			</div> 
 			<meta itemprop="url" content="<?php the_permalink(); ?>" />

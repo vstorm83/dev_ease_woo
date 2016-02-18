@@ -1,23 +1,23 @@
-jQuery(function () {
-    try {
-        jQuery("#tabs").tabs();
-        jQuery("#woof_options").sortable();
-        jQuery('.woof-color-picker').wpColorPicker();
-    } catch (e) {
-
-    }
-    //+++
-    jQuery('.js_cache_count_data_clear').click(function () {
-        jQuery(this).next('span').html('clearing ...');
-        var _this = this;
-        var data = {
-            action: "woof_cache_count_data_clear"
-        };
-        jQuery.post(ajaxurl, data, function () {
-            jQuery(_this).next('span').html('cleared!');
-        });
-
-        return false;
-    });
-
-});
+jQuery(function () {
+    try {
+        jQuery("#tabs").tabs();
+        jQuery("#woof_options").sortable();
+        jQuery('.woof-color-picker').wpColorPicker();
+    } catch (e) {
+
+    }
+    //+++
+    jQuery('.js_cache_count_data_clear').click(function () {
+        jQuery(this).next('span').html('clearing ...');
+        var _this = this;
+        var data = {
+            action: "woof_cache_count_data_clear"
+        };
+        jQuery.post(ajaxurl, data, function () {
+            jQuery(_this).next('span').html('cleared!');
+        });
+
+        return false;
+    });
+
+});

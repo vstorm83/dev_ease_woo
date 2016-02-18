@@ -15,6 +15,7 @@
         protected $method;  
         protected $params = null;
         protected $tranlatePage = array();
+        protected $SEO = array();
 
         public  $is_wp = 0;
 		public $url_routed = null;
@@ -196,7 +197,7 @@
 					
                //get meta post
 
-			   mysql_query("SET SESSION group_concat_max_len = 1000000;");
+		Ahlu::DB()->get_results("SET SESSION group_concat_max_len = 1000000;");
 
              $a =   Ahlu::DB()->get_results("
 
@@ -214,12 +215,9 @@
 
                         FROM ".Ahlu::DB()->postmeta." 
 
-                    ) as mp ,".Ahlu::DB()->posts." p, ".Ahlu::DB()->term_relationships." term_r
-
-where mp.post_id= p.ID and p.ID={$post->ID}");
+                    ) as mp ,".Ahlu::DB()->posts." p where mp.post_id= p.ID and p.ID={$post->ID}");
 
               //alway
-
                 if(is_array($a) && count($a)>0){
 
 						$obj = $a[0];
@@ -235,7 +233,6 @@ where mp.post_id= p.ID and p.ID={$post->ID}");
 
 				
 							$k=explode("=",ltrim($v,"_"));
-
 							$obj->{$k[0]} = StringUtil::is_serialized($k[1]) ? unserialize($k[1]) : $k[1];
 
 						}

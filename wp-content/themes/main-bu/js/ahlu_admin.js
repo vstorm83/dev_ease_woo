@@ -1,3 +1,3 @@
-$(document).ready(function(){
-	$("#post-preview").hide();
+$(document).ready(function(){
+	$("#post-preview").hide();
 });
